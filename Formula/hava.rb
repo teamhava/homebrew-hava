@@ -5,26 +5,16 @@
 class Hava < Formula
   desc "hava is a Go CLI tool to interact with app.hava.io platform."
   homepage "https://github.com/teamhava/hava-ui-cli"
-  version "0.0.23-pre-alpha"
+  version "0.0.24-pre-alpha"
   license "Apache-2.0"
-  depends_on :linux
+  depends_on :macos
 
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/teamhava/hava-ui-cli/releases/download/0.0.23-pre-alpha/hava_Linux_arm64.zip"
-      sha256 "9c4e62ec752e2872e989a93c9a84ff8602dbd3e6829b3761917ef315fc7524ee"
+  on_macos do
+    url "https://github.com/teamhava/hava-ui-cli/releases/download/0.0.24-pre-alpha/hava_Darwin_all.zip"
+    sha256 "0124787d9be3c5654ded859ee6edf8fc9be379248333d7046f7503a84c9ee356"
 
-      def install
-        bin.install "hava"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/teamhava/hava-ui-cli/releases/download/0.0.23-pre-alpha/hava_Linux_x86_64.zip"
-      sha256 "75fe179b5e484a0a9d9541777c7d75ffa39fa61a4605c8b442af27ab36fdb0ef"
-
-      def install
-        bin.install "hava"
-      end
+    def install
+      bin.install "hava"
     end
   end
 end
