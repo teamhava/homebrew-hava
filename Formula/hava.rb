@@ -11,7 +11,7 @@ class Hava < Formula
 
   on_macos do
     url "https://github.com/teamhava/hava-ui-cli/releases/download/0.1.2/hava_Darwin_all.zip"
-    sha256 "e14551ef8924270e1681cbc0dbc29dc3ade3c8f5f4c3365e89f674edb20b51d2"
+    sha256 "5126dd103f4e396208d6bca70b902f721003f861ac2a448268c18a37d8e0e8dc"
 
     def install
       bin.install "hava"
